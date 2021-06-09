@@ -1,5 +1,5 @@
 {
-  "name": "with-tailwindcss",
+  "name": "samplx",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,16 +8,12 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "latest",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-icons": "^4.2.0"
+    "next": "10.2.3",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   },
   "devDependencies": {
     "@types/react": "17.0.9",
-    "autoprefixer": "^10.0.4",
-    "postcss": "^8.1.10",
-    "tailwindcss": "^2.0.4",
     "typescript": "4.3.2"
   }
 }
