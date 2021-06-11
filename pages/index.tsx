@@ -1,4 +1,7 @@
 import Button from "../src/app/components/Button";
+import InputText from "../src/app/components/InputText";
+import Link from "../src/app/components/Link";
+import AuthSeparator from "../src/auth/components/AuthSeparator";
 
 export default function Home() {
   return (
@@ -7,7 +10,11 @@ export default function Home() {
         max-w-xs h-screen flex flex-col items-center 
         justify-center m-auto px-4 space-y-3
       ">
+      <InputText type="email" placeholder="email"/>
+      <InputText type="password" placeholder="password"/>
+      <Link className="p-2">Forgot Password?</Link>
       <Button>Login</Button>
+      <AuthSeparator/>
       <Button 
         variant="light" 
         slot="left" 
@@ -32,6 +39,7 @@ export default function Home() {
       >
         Continue with Apple
       </Button>
+      <Link className="p-2">Create a new account</Link>
     </div>
   )
 }

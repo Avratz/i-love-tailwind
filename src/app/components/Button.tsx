@@ -14,18 +14,18 @@ const Button:React.FC<ButtonProps> = ({
   children, 
   variant = "default", 
   slot, 
-  icon,
+  icon = '',
   iconColor,
-  handleClick
+  handleClick = () => {}
 }) => {
   const btnClass = () => (
     variant ===  'default' ? 
-    'bg-primary-500 hover:bg-primary-400 active:bg-primary-600 text-fwhite' 
+    'bg-secondary-500 hover:bg-secondary-400 active:bg-secondary-600 text-fwhite' 
     : 'bg-fwhite hover:bg-white active:bg-gray-100 text-black' 
   )
   return (
     <button 
-      onClick={handleClick ? handleClick : null}
+      onClick={handleClick}
       className={
         `
         ${btnClass()} h-11 w-full rounded shadow-md 
