@@ -5,9 +5,10 @@ interface ButtonProps {
   children: React.ReactNode
   variant?: 'default' | 'light'
   slot?: 'left' | 'right'
-  icon?: string
+  icon?: any
   iconColor?: string
   handleClick?: () => void
+  className?: string
 }
 
 const Button:React.FC<ButtonProps> = ({
@@ -16,6 +17,7 @@ const Button:React.FC<ButtonProps> = ({
   slot, 
   icon = '',
   iconColor,
+  className = '',
   handleClick = () => {}
 }) => {
   const btnClass = () => (
@@ -28,7 +30,7 @@ const Button:React.FC<ButtonProps> = ({
       onClick={handleClick}
       className={
         `
-        ${btnClass()} h-11 w-full rounded shadow-md 
+        ${className} ${btnClass()} h-11 w-full rounded shadow-md 
         hover:shadow-lg active:shadow-none transition-shadow 
         focus:outline-none flex items-center justify-between
         `
