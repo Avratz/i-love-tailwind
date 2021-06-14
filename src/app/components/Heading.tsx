@@ -7,8 +7,8 @@ interface iHeading {
   className?: string
 }
 
-const Heading:React.FC<iHeading> = ({as  = "h1", size ="base", children, className}) => {
-  return React.createElement(as, {className: `text-${size} className`}, children);
+const Heading:React.FC<iHeading> = ({as  = "h1", size ="base", children, className = ''}) => {
+  return React.createElement(as, {className: `text-${size} ${className}`}, children);
 }
 
 export default Heading
